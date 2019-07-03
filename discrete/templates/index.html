@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>Ứng dụng hỗ trợ học Toán Rời Rạc</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/jquery.ba-throttle-debounce.min.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>
+    <script src="https://unpkg.com/d3-graphviz@1.3.1/build/d3-graphviz.min.js"></script>
+    <script src="{% static "js/imagesloaded.pkgd.js" %}"></script>
+    <script src="{% static "js/collapsible-list.src.js" %}"></script>
+    <script src="{% static "js/autocomplete-search.js" %}"></script>
+    <script src="{% static "js/keyword-search.js" %}"></script>
+    <script src="{% static "js/solve.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ TeX: { Macros: { boldred: ["\\color{red}{\\textbf{#1}}", 1], boldgreen: ["\\color{green}{\\textbf{#1}}", 1], boldblue: ["\\color{blue}{\\textbf{#1}}", 1] } } });
+ 
+    </script>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="TPvoR6gyc0082b2IxIxceQXszzSt_shLtoPTErZOcH8"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/fontawesome-all.min.css" %}">
+</head>
+<body>
+<div class="container-fluid" id="app">
+    <header>
+        <div class="container m-0">
+            <div class="row">
+                <div class="col-sm">
+                    <h2 class="mt-1 mb-1">Ứng dụng hỗ trợ học Toán Rời Rạc</h2>
+                </div>
+                <ul class="nav nav-pills col-sm d-flex align-items-center">
+                    <!--
+                    <li class="nav-item">
+                        <a id="lookup-tab" class="nav-link first active show" data-toggle="pill" href="#lookup">Tra cứu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="solve-tab" class="nav-link active show" data-toggle="pill" href="#solve">Giải toán</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="tab-content" id="main">
+        <div id="lookup" class="tab-pane active">
+            
+            {% include "solve.html" %}
+            
+        </div>
+        <div id="solve" class="tab-pane fade">
+            {% include "solve.html" %}
+        </div>
+    </main>
+    <footer>
+        <div style="height: 20px" class="pl-2 pr-2">
+            <a href="mailto:khoanguyenit97@gmail.com?subject=[toanroirac.com]"> <i
+                    style="width: 20px;color:red"
+                    class="far fa-envelope float-right align-items-center"></i></a>
+        </div>
+    </footer>
+</div>
+</body>

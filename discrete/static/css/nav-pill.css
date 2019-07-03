@@ -1,0 +1,31 @@
+.nav-link {
+    padding: 4px 16px 4px 16px;
+}
+
+.nav-link.first {
+    border-radius: 5px 0px 0px 5px;
+}
+.nav-link.last {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.nav-pills a {
+    border: 1px solid #007bff;
+}
+
+.nav-pills .active {
+    color: white;
+    background-color: #007bff;
+}
+
+ul.full-pills .nav-item {
+    display: inline-block;   
+    width: 50%;
+}
+
+ul.full-pills .nav-link {
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    padding: 4px 0px 4px 0px;
+}
+

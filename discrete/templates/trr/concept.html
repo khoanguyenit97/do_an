@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concept</title>
+</head>
+<body>
+{% if result %}
+    <div>Result</div>
+    {{ result.2 }}
+    <div>{% autoescape off %}{{ result.0 }}{% endautoescape %}</div>
+    <ul>
+    {% for item in result.1 %}
+    <li>{{ item.name }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+</body>
+</html>

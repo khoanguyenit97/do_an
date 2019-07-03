@@ -1,0 +1,44 @@
+form.search-bar input[type=text] {
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/*clear floats*/
+form.search-bar::after {
+    clear: both;
+}
+
+.popover {
+    max-width: 600px;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid black;
+    z-index: 99;
+    top: 100%;
+    width: 100%;
+    height: 250px;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 4px 6px #888888;
+}
+
+.autocomplete-items hr {
+    color: black;
+    border-color: black;
+}
+
+/*.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}*/

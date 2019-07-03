@@ -1,0 +1,33 @@
+{% for t_index, index, content, sub_nodes in result %}
+    <div class="level-ml">
+    {% if index|length > 1 %}
+        <div><strong id="content-{{ t_index }}" class="title">{{ index }}</strong></div>
+    {% endif %}
+    {% for k, r in content %}
+        {% if content|length > 1 %}
+            <div id="index-{{ k.keyphrase }}" class="title"><strong>{{ k.name }}</strong></div>
+        {% endif %}
+        {% if k.content != "\"" %}
+            {% autoescape off %}{{ k.content }}{% endautoescape %}
+        {% endif %}
+        {% if r|length > 0 %}
+            <div class="related-concepts">
+                <p style="margin-bottom: 5px;"><strong>Các khái niệm liên quan:</strong></p>
+                {% for related in r %}
+                    <button
+                            data-index="{{ related.t_index }}"
+                            type="button"
+                            class="btn btn-info"
+                            onclick="onClickKnowledgeIndex(this)"
+                    >
+                        {{ related.name }}
+                    </button>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endfor %}
+    {% if sub_nodes|length > 0 %}
+        {% include "trr/chapter_inner.html" with result=sub_nodes %}
+    {% endif %}
+    </div>
+{% endfor %}

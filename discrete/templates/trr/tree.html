@@ -1,0 +1,25 @@
+{% for item, list in tree %}
+    {% if item.t_index|length == 1%}
+        <li data-type={{"chapter"}} id={{item.t_index}} class="index-item">
+            <span>
+                {{ item.name }}
+            </span>
+            {% if list|length %}
+                <ul>
+                    {% include "trr/tree.html" with tree=list %}
+                </ul>
+            {% endif %}
+        </li>
+    {% else %}
+        <li data-type={{"item"}} id={{item.t_index}} class="index-item">
+            <span>
+                {{ item.t_index }} {{ item.name }}
+            </span>
+            {% if list|length %}
+                <ul>
+                    {% include "trr/tree.html" with tree=list %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,32 @@
+<div style="height: 100%">
+    <div id="problem-input-container">
+        <div id="problem-input">
+            <form class="form-control" id="problem-input-form">
+                {% csrf_token %}
+                <div id="problem-type">
+                    <label style="margin: 0;"><strong>Dạng bài toán</strong></label>
+                    <select class="custom-select custom-select-md" id="problem-type-select" style="margin-top: 4px;">
+                        <option selected value="1">Rút gọn hàm boolean bằng karnaugh</option>
+                        <option value="2">Rút gọn dạng mệnh đề</option>
+                        <option value="3">Chứng minh hai dạng mệnh đề tương đương</option>                        
+                        <option value="4">Chứng minh một suy luận</option>
+                    </select>
+                </div>
+                
+                <div id="problem-content">
+                    <br>
+                    <textarea class="form-control" id="problem-content-input"></textarea>
+                </div>
+                <div id="problem-submit">
+                    <button type="button" class="btn btn-primary" id="btn-problem-submit">Tính</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="input-guide"></div>
+
+    </div>
+    <div id="answer">
+{#        {% include "./trr/slider.html" %}#}
+    </div>
+</div>

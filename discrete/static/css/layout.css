@@ -1,0 +1,228 @@
+#app {
+    height: 100vh;
+    min-width: 850px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+header {
+    background-color: #e9ecef;
+    color: blue;
+}
+
+#main {
+    flex: 1;
+    overflow: hidden;
+    padding: 5px 10px 5px 10px;
+}
+
+#main > div {
+    height: 100%;
+}
+
+#side-bar {
+    height: 100%;
+    width: 25%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar {
+    padding: 0px !important;
+}
+
+#navbar .index-item.active > span {
+    background: #007bff;
+    color: white;
+}
+
+#side-bar-content {
+    flex: 1;
+    overflow: hidden;
+    border: 1px solid #007bff;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#keyword-list .list-group .list-group-item.hidden {
+    display: none;
+}
+
+#keyword-list .list-group .list-group-item:hover {
+    cursor: pointer;
+    background: #007bff;
+}
+
+#content {
+    display: inline-flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    padding-left: 10px;
+}
+
+#post {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid grey;
+    border-radius: 3px 3px 3px 3px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+#post .title {
+    font-size: 1.2em;
+}
+
+#post img {
+    display: block;
+    margin: 0 auto;
+}
+
+#post .related-concepts {
+    background: #e9ecef;
+    margin: 10px;
+    padding: 10px;
+}
+
+#post .related-concepts .btn-info {
+    margin-top: 5px;
+}
+
+#solve {
+    overflow: auto;
+}
+
+#problem-input {
+}
+
+#answer {
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    width: calc(70% - 10px);
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    float: right;
+    overflow-y: auto;
+}
+
+.answer-table td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 15px;
+}
+
+.slider {
+    height: calc(100%);
+    overflow-y: hidden;
+}
+
+.slider .content {
+    height: calc(100% - 50px);
+    margin-bottom: 5px;
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#problem-input-container {
+    width: 30%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#input-guide {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    overflow-y: auto;
+}
+
+#problem-input-form {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 10px 0px 10px;
+    display: table;
+}
+
+#problem-input-form div {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+}
+
+#problem-input select, #problem-input textarea {
+    border-color: black;
+}
+
+#problem-type {
+    display: table-cell;
+    width: 100%;
+}
+
+.linkable:hover {
+    text-decoration: none;
+}
+
+#order-type {
+    display: table-cell;
+    width: 100%;
+}
+
+#problem-content {
+    display: table-cell;
+    width: 100%;
+}
+
+#problem-submit {
+    display: table-cell;
+    background: #1c7430;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+#search-guide-popover {
+    height: 36px;
+    width: 40px;
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+#search-options {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.card-body-first {
+    flex: 0 0 auto;
+    padding: 0;
+    margin-left: 0;
+}
+
+.card-body {
+    flex: 0 0 auto;
+    padding: 0;
+    margin-left: 16px;
+}
+
+.level-ml {
+    margin-left: 6px;
+}
